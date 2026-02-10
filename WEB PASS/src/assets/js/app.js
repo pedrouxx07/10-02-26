@@ -85,10 +85,6 @@ function salvarAtendimento() {
     return;
   }
 
-  atendimentos.push({ paciente, data, hora, status, tipo });
-  renderAtendimentos();
-}
-
 function cancelarAtendimento(index) {
   if (!confirm('Cancelar este atendimento?')) return;
 
@@ -117,4 +113,5 @@ function filtrarAtendimentos() {
   const filtrados = atendimentos.filter(a => a.data === data);
   renderAtendimentos(filtrados);
 }
+
 

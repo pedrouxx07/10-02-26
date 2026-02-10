@@ -52,8 +52,8 @@ function renderPacientes() {
     li.innerHTML = `
       ${p.nome} – ${p.contato}
       <div>
-        <button onclick="editarPaciente(${p.id})">✏️</button>
-        <button onclick="excluirPaciente(${p.id})">🗑️</button>
+        <button onclick="editarPaciente(${p.id})"></button>
+        <button onclick="excluirPaciente(${p.id})"></button>
       </div>
     `;
     listaPacientes.appendChild(li);
@@ -104,7 +104,7 @@ function renderAtendimentos(lista = atendimentos) {
     li.innerHTML = `
       ${a.data} ${a.hora} – ${a.paciente}
       <span class="status-${a.status}">${a.status}</span>
-      <button onclick="cancelarAtendimento(${index})">❌</button>
+      <button onclick="cancelarAtendimento(${index})"></button>
     `;
     listaAtendimentos.appendChild(li);
   });
@@ -117,3 +117,4 @@ function filtrarAtendimentos() {
   const filtrados = atendimentos.filter(a => a.data === data);
   renderAtendimentos(filtrados);
 }
+

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Pacientes – WEB PASS</title>
+  <link rel="stylesheet" href="../../src/assets/css/style.css">
+</head>
+<body>
+
+<header>
+  <h1>Pacientes</h1>
+</header>
+
+<main style="grid-template-columns: 1fr;">
+  <section>
+    <label>Nome</label>
+    <input id="nomePaciente">
+
+    <label>Contato</label>
+    <input id="contatoPaciente">
+
+    <label>Observação</label>
+    <textarea id="obsPaciente"></textarea>
+
+    <button onclick="salvarPaciente()">Salvar Paciente</button>
+
+    <ul id="listaPacientes"></ul>
+
+    <button onclick="location.href='index.html'">⬅ Voltar</button>
+  </section>
+</main>
+
+<footer>WEB PASS</footer>
+
+<script src="../../src/assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Atendimentos – WEB PASS</title>
+  <link rel="stylesheet" href="../../src/assets/css/style.css">
+</head>
+<body>
+
+<header>
+  <h1>Atendimentos</h1>
+</header>
+
+<main style="grid-template-columns: 1fr;">
+  <section>
+    <label>Paciente</label>
+    <select id="pacienteAtendimento"></select>
+
+    <label>Data</label>
+    <input type="date" id="dataAtendimento">
+
+    <label>Horário</label>
+    <input type="time" id="horaAtendimento">
+
+    <label>Tipo</label>
+    <select id="tipoAtendimento">
+      <option>Consulta</option>
+      <option>Retorno</option>
+      <option>Avaliação</option>
+    </select>
+
+    <label>Status</label>
+    <select id="statusAtendimento">
+      <option value="agendada">Agendada</option>
+      <option value="realizada">Realizada</option>
+      <option value="cancelada">Cancelada</option>
+    </select>
+
+    <button onclick="salvarAtendimento()">Salvar Atendimento</button>
+
+    <label>Filtrar por data</label>
+    <input type="date" id="filtroData">
+    <button onclick="filtrarAtendimentos()">Filtrar</button>
+    <button onclick="renderAtendimentos()">Limpar</button>
+
+    <ul id="listaAtendimentos"></ul>
+
+    <button onclick="location.href='index.html'">⬅ Voltar</button>
+  </section>
+</main>
+
+<footer>WEB PASS</footer>
+
+<script src="../../src/assets/js/app.js"></script>
+</body>
+</html>
